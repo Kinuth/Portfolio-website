@@ -4,6 +4,7 @@ import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Code2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FeaturedProjects() {
     return (
@@ -34,13 +35,47 @@ export default function FeaturedProjects() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col hover:border-primary/50 transition-colors group"
                         >
-                            <div className="p-6 flex-1 flex flex-col">
-                                <div className="flex justify-between items-start mb-4">
-                                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                                        <Code2 size={24} />
+                            {/* Thumbnail Image */}
+                            <div className="relative h-48 w-full overflow-hidden bg-slate-800">
+                                {project.img ? (
+                                    <Image
+                                        src={project.img}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                ) : (
+                                    <div className="flex items-center justify-center h-full text-slate-700">
+                                        <Code2 size={48} />
                                     </div>
-                                </div>
+                                )}
 
+                                {/* Overlay with links */}
+                                <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                    {project.links.code && (
+                                        <Link
+                                            href={project.links.code}
+                                            target="_blank"
+                                            className="p-3 bg-slate-800 text-white rounded-full hover:bg-white hover:text-slate-900 transition-colors"
+                                            title="View Code"
+                                        >
+                                            <Github size={20} />
+                                        </Link>
+                                    )}
+                                    {(project.links.demo || (project.links as any).view) && ( // Handle both demo and view keys
+                                        <Link
+                                            href={project.links.demo || (project.links as any).view}
+                                            target="_blank"
+                                            className="p-3 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors"
+                                            title="Live Demo"
+                                        >
+                                            <ExternalLink size={20} />
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="p-6 flex-1 flex flex-col">
                                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
@@ -49,7 +84,7 @@ export default function FeaturedProjects() {
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
@@ -58,23 +93,6 @@ export default function FeaturedProjects() {
                                             {tag}
                                         </span>
                                     ))}
-                                </div>
-
-                                <div className="flex gap-4 pt-4 border-t border-slate-800">
-                                    <Link
-                                        href={project.links.code}
-                                        className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
-                                    >
-                                        <Github size={18} />
-                                        <span>View Code</span>
-                                    </Link>
-                                    <Link
-                                        href={project.links.demo}
-                                        className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-primary transition-colors"
-                                    >
-                                        <ExternalLink size={18} />
-                                        <span>Live Demo</span>
-                                    </Link>
                                 </div>
                             </div>
                         </motion.div>

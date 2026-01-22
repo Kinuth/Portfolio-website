@@ -1,4 +1,3 @@
-// Imports removed as they were unused
 
 export const siteConfig = {
   name: "Ryan Kinuthia",
@@ -6,6 +5,7 @@ export const siteConfig = {
   headline: "Architecting Scalable Digital Solutions.",
   subHeadline:
     "Fullstack Engineer focused on turning complex requirements into elegant, maintainable code.",
+  profilePic: "/profile.jpg", // Added profile pic path
   socials: {
     github: "https://github.com/Kinuth",
     linkedin: "https://www.linkedin.com/in/ryan-kinuthia/",
@@ -38,9 +38,10 @@ export const projects = [
     description:
       "A FinTech solution for investment groups to track contributions, loans, and dividends.",
     tags: ["Django", "Python", "PostgreSQL"],
+    img: "/stax-project.png", 
     links: {
-      demo: "#", // Add real links if available
-      code: "#", // Add real links if available
+      demo: "https://www.loom.com/share/f718f921a2a54265aa9de714e08f3e4a",
+      view: "https://stax-chama-app.vercel.app/",
     },
   },
   {
@@ -48,9 +49,9 @@ export const projects = [
     description:
       "A high-traffic RESTful API with JWT auth, image uploads, and feed algorithms.",
     tags: ["Django REST Framework", "Redis", "Celery"],
+    img: "/project-placeholder.png",
     links: {
-      demo: "#",
-      code: "#",
+      code: "https://github.com/Kinuth/Alx_DjangoLearnLab/tree/main/social_media_api",
     },
   },
   {
@@ -58,9 +59,9 @@ export const projects = [
     description:
       "A modern landing page for a Kenyan solar startup with high-performance animations.",
     tags: ["Next.js", "Tailwind", "Framer Motion"],
+    img: "/gridflow.png",
     links: {
-      demo: "#",
-      code: "#",
+      view: "https://gridflow-solar-web.vercel.app/",
     },
   },
 ];
