@@ -9,7 +9,7 @@ export const siteConfig = {
   socials: {
     github: "https://github.com/Kinuth",
     linkedin: "https://www.linkedin.com/in/ryan-kinuthia/",
-    email: "mailto:contact@ryankinuthia.com", // Placeholder, updated based on contact form requirements
+    email: "mailto:kinuthiaryan01@gmail.com",
   },
 };
 
