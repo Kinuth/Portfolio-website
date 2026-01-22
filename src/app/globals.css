@@ -7,8 +7,3 @@
   --foreground: #f8fafc; /* Slate 50 */
 }
 
-@layer base {
-  body {
-    @apply bg-background text-foreground antialiased;
-  }
-}
