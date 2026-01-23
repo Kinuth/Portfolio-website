@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} font-sans bg-background text-foreground`}>
+      <body suppressHydrationWarning className={`${inter.variable} font-sans bg-background text-foreground`}>
         {children}
       </body>
     </html>
