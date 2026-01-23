@@ -48,7 +48,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href={siteConfig.socials.email}
+                        href="#contact"
                         className="px-5 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-full transition-colors"
                     >
                         Hire Me
@@ -83,7 +83,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <a
-                                href={siteConfig.socials.email}
+                                href="#contact"
                                 className="px-5 py-3 bg-primary hover:bg-primary-hover text-white text-center font-medium rounded-lg transition-colors block"
                             >
                                 Hire Me
