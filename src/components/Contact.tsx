@@ -58,7 +58,7 @@ export function Contact() {
                                 <div className="p-3 bg-slate-800 rounded-lg group-hover:bg-primary/10 transition-colors">
                                     <Mail className="group-hover:text-primary" size={24} />
                                 </div>
-                                <span className="text-lg">kinuthiaryan01@gmail.com</span>
+                                <span className="text-lg">ryan-kinuthia@web.de</span>
                             </a>
                             <a href={siteConfig.socials.linkedin} target="_blank" className="flex items-center gap-4 text-slate-300 hover:text-primary transition-colors group">
                                 <div className="p-3 bg-slate-800 rounded-lg group-hover:bg-[#0077b5]/10 transition-colors">
