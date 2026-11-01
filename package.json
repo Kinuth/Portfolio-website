@@ -2,14 +2,13 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+"scripts": {
   "dev": "next dev",
+  "next:build": "next build",
   "build": "opennextjs-cloudflare build",
   "start": "next start",
-  "lint": "next lint",
-  "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-  "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
-  },
+  "lint": "next lint"
+},
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.15",
     "@react-email/components": "^1.0.6",
