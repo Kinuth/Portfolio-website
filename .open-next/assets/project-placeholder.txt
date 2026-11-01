@@ -1,0 +1,1 @@
+(binary content - creating via generate_image usually, but for now using a simple text file renamed to png is unsafe, so I will generate one with generate_image tool next)

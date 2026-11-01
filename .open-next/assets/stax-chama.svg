@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fintech-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06121e" />
+      <stop offset="50%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#020813" />
+    </linearGradient>
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <linearGradient id="fin-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#112240" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0a192f" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="fin-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#fintech-bg)" />
+
+  <!-- Subgrid Matrix Pattern -->
+  <g opacity="0.06" stroke="#10b981" stroke-width="1">
+    <pattern id="fin-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" />
+    </pattern>
+    <rect width="800" height="450" fill="url(#fin-grid)" />
+  </g>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="710" cy="80" r="140" fill="#10b981" opacity="0.12" filter="url(#fin-glow)" />
+  <circle cx="100" cy="370" r="120" fill="#f59e0b" opacity="0.09" filter="url(#fin-glow)" />
+
+  <!-- Main Container -->
+  <rect x="25" y="25" width="750" height="400" rx="16" fill="url(#fin-panel)" stroke="#233554" stroke-width="1.5" />
+
+  <!-- Header Bar -->
+  <path d="M 25 41 A 16 16 0 0 1 41 25 L 759 25 A 16 16 0 0 1 775 41 L 775 75 L 25 75 Z" fill="#0b172a" />
+  <line x1="25" y1="75" x2="775" y2="75" stroke="#233554" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="50" cy="50" r="6" fill="#ef4444" opacity="0.85" />
+  <circle cx="70" cy="50" r="6" fill="#f59e0b" opacity="0.85" />
+  <circle cx="90" cy="50" r="6" fill="#10b981" opacity="0.85" />
+
+  <!-- Title -->
+  <text x="120" y="55" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">
+    STAX_CHAMA :: GROUP INVESTMENT &amp; REVOLVING LOAN CORE
+  </text>
+
+  <!-- Live Status Badge -->
+  <rect x="625" y="38" width="130" height="25" rx="12.5" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+  <circle cx="640" cy="50.5" r="4" fill="#34d399">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="652" y="55" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">AUDIT VERIFIED</text>
+
+  <!-- Left Column: Capital Metrics & Balances (x: 50 to 390) -->
+  <!-- Capital Asset Card -->
+  <rect x="50" y="95" width="160" height="90" rx="10" fill="#172a45" stroke="#233554" stroke-width="1" />
+  <text x="65" y="120" fill="#8892b0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">TOTAL GROUP ASSETS</text>
+  <text x="65" y="154" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">KES 4.85M</text>
+  <rect x="65" y="166" width="130" height="4" rx="2" fill="#233554" />
+  <rect x="65" y="166" width="125" height="4" rx="2" fill="url(#emerald-grad)" />
+
+  <!-- Loan Portfolio Card -->
+  <rect x="225" y="95" width="160" height="90" rx="10" fill="#172a45" stroke="#233554" stroke-width="1" />
+  <text x="240" y="120" fill="#8892b0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">ACTIVE LOAN CAPITAL</text>
+  <text x="240" y="154" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">KES 1.42M</text>
+  <rect x="240" y="166" width="130" height="4" rx="2" fill="#233554" />
+  <rect x="240" y="166" width="95" height="4" rx="2" fill="url(#amber-grad)" />
+
+  <!-- Member Contribution & Loan Engine Panel -->
+  <rect x="50" y="200" width="335" height="205" rx="12" fill="#0d1b2a" stroke="#1d2d44" stroke-width="1.5" />
+  <text x="70" y="228" fill="#ccd6f6" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">CONTRIBUTION LEDGER</text>
+  <text x="285" y="228" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">98.4% ON-TIME</text>
+
+  <!-- Ledger Row 1 -->
+  <g transform="translate(68, 245)">
+    <rect width="300" height="38" rx="6" fill="#172a45" stroke="#233554" stroke-width="0.8" />
+    <circle cx="20" cy="19" r="6" fill="#10b981" />
+    <text x="35" y="18" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Monthly Contribution Cycle</text>
+    <text x="35" y="30" fill="#8892b0" font-family="monospace" font-size="9">Batch processed 24 members</text>
+    <text x="225" y="24" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">+KES 240K</text>
+  </g>
+
+  <!-- Ledger Row 2 -->
+  <g transform="translate(68, 292)">
+    <rect width="300" height="38" rx="6" fill="#172a45" stroke="#233554" stroke-width="0.8" />
+    <circle cx="20" cy="19" r="6" fill="#f59e0b" />
+    <text x="35" y="18" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Revolving Loan Disbursement</text>
+    <text x="35" y="30" fill="#8892b0" font-family="monospace" font-size="9">Auto-amortized: 10% interest</text>
+    <text x="225" y="24" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="700">-KES 150K</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <g transform="translate(68, 342)">
+    <rect width="300" height="48" rx="6" fill="#101f33" stroke="#1d2d44" stroke-width="1" />
+    <text x="15" y="20" fill="#8892b0" font-family="system-ui, -apple-system, sans-serif" font-size="10">AUDIT TRAIL</text>
+    <text x="15" y="36" fill="#f8fafc" font-family="monospace" font-size="11" font-weight="700">Double-Entry Immutable Log</text>
+    <text x="225" y="28" fill="#38bdf8" font-family="monospace" font-size="10">PostgreSQL</text>
+  </g>
+
+  <!-- Right Column: Dividends, Yields & Analytics (x: 410 to 750) -->
+  <rect x="410" y="95" width="340" height="310" rx="12" fill="#0d1b2a" stroke="#1d2d44" stroke-width="1.5" />
+  <text x="430" y="123" fill="#ccd6f6" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">DIVIDENDS &amp; YIELD PROJECTIONS</text>
+  <text x="665" y="123" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">+12.4% APR</text>
+
+  <!-- Growth Curve & Analytics Chart -->
+  <g transform="translate(430, 145)">
+    <rect width="300" height="150" rx="8" fill="#172a45" stroke="#233554" stroke-width="0.8" />
+    
+    <!-- Grid lines -->
+    <line x1="20" y1="120" x2="280" y2="120" stroke="#233554" stroke-width="1" />
+    <line x1="20" y1="80" x2="280" y2="80" stroke="#233554" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="20" y1="40" x2="280" y2="40" stroke="#233554" stroke-width="1" stroke-dasharray="3,3" />
+    
+    <!-- Growth Area Chart -->
+    <path d="M 20 115 Q 80 110, 140 85 T 210 60 T 280 30" fill="none" stroke="#34d399" stroke-width="2.5" />
+    <path d="M 20 115 Q 80 110, 140 85 T 210 60 T 280 30 L 280 120 L 20 120 Z" fill="#10b981" opacity="0.12" />
+    
+    <circle cx="280" cy="30" r="5" fill="#10b981" stroke="#ffffff" stroke-width="1.5" />
+    
+    <text x="25" y="25" fill="#8892b0" font-family="system-ui, -apple-system, sans-serif" font-size="10">COMPOUND CAPITAL GROWTH</text>
+    <text x="210" y="25" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">ANNUAL AUDIT</text>
+    <text x="25" y="138" fill="#64748b" font-family="monospace" font-size="9">Q1</text>
+    <text x="100" y="138" fill="#64748b" font-family="monospace" font-size="9">Q2</text>
+    <text x="180" y="138" fill="#64748b" font-family="monospace" font-size="9">Q3</text>
+    <text x="260" y="138" fill="#64748b" font-family="monospace" font-size="9">Q4 (Distribution)</text>
+  </g>
+
+  <!-- Footer Metrics -->
+  <g transform="translate(430, 310)">
+    <rect width="300" height="78" rx="8" fill="#101f33" stroke="#1d2d44" stroke-width="1" />
+    <text x="15" y="24" fill="#8892b0" font-family="system-ui, -apple-system, sans-serif" font-size="10">STACK ARCHITECTURE</text>
+    <text x="15" y="44" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Django + PostgreSQL + Celery</text>
+    <text x="15" y="64" fill="#34d399" font-family="monospace" font-size="10">Production Ready • Multi-Tenant • RBAC Security</text>
+  </g>
+</svg>

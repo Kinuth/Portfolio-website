@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="solar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021c14" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#02150e" />
+    </linearGradient>
+    <linearGradient id="sun-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fde047" />
+    </linearGradient>
+    <linearGradient id="leaf-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#6ee7b7" />
+    </linearGradient>
+    <linearGradient id="solar-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="sun-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#solar-bg)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.07" stroke="#34d399" stroke-width="1">
+    <pattern id="solar-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" />
+    </pattern>
+    <rect width="800" height="450" fill="url(#solar-grid)" />
+  </g>
+
+  <!-- Glowing Sun / Energy Orbs -->
+  <circle cx="700" cy="70" r="140" fill="#f59e0b" opacity="0.14" filter="url(#sun-blur)" />
+  <circle cx="100" cy="380" r="110" fill="#10b981" opacity="0.1" filter="url(#sun-blur)" />
+
+  <!-- Main Container -->
+  <rect x="25" y="25" width="750" height="400" rx="16" fill="url(#solar-panel)" stroke="#047857" stroke-width="1.5" />
+
+  <!-- Window Header -->
+  <path d="M 25 41 A 16 16 0 0 1 41 25 L 759 25 A 16 16 0 0 1 775 41 L 775 75 L 25 75 Z" fill="#022c22" />
+  <line x1="25" y1="75" x2="775" y2="75" stroke="#047857" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="50" cy="50" r="6" fill="#ef4444" opacity="0.85" />
+  <circle cx="70" cy="50" r="6" fill="#f59e0b" opacity="0.85" />
+  <circle cx="90" cy="50" r="6" fill="#10b981" opacity="0.85" />
+
+  <!-- Title -->
+  <text x="120" y="55" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5">
+    GRIDFLOW_SOLAR :: CLEAN ENERGY PLATFORM &amp; SAVINGS CALCULATOR
+  </text>
+
+  <!-- Live Status Badge -->
+  <rect x="625" y="38" width="130" height="25" rx="12.5" fill="#065f46" stroke="#34d399" stroke-width="1" />
+  <circle cx="640" cy="50.5" r="4" fill="#a7f3d0">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="652" y="55" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">100% RENEWABLE</text>
+
+  <!-- Left Column: Energy Telemetry & Metrics (x: 50 to 390) -->
+  <!-- Card 1: Solar Generation Peak -->
+  <rect x="50" y="95" width="160" height="90" rx="10" fill="#064e3b" stroke="#047857" stroke-width="1" />
+  <text x="65" y="120" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">PEAK GENERATION</text>
+  <text x="65" y="154" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">18.4</text>
+  <text x="120" y="154" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">kW/h</text>
+  <rect x="65" y="166" width="130" height="4" rx="2" fill="#022c22" />
+  <rect x="65" y="166" width="125" height="4" rx="2" fill="url(#sun-glow)" />
+
+  <!-- Card 2: Cost Reduction -->
+  <rect x="225" y="95" width="160" height="90" rx="10" fill="#064e3b" stroke="#047857" stroke-width="1" />
+  <text x="240" y="120" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">ENERGY SAVINGS</text>
+  <text x="240" y="154" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">-68%</text>
+  <text x="310" y="154" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">Bills</text>
+  <rect x="240" y="166" width="130" height="4" rx="2" fill="#022c22" />
+  <rect x="240" y="166" width="105" height="4" rx="2" fill="url(#leaf-glow)" />
+
+  <!-- Environmental Impact Panel -->
+  <rect x="50" y="200" width="335" height="205" rx="12" fill="#022c22" stroke="#065f46" stroke-width="1.5" />
+  <text x="70" y="228" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">ECO TELEMETRY &amp; CO₂ OFFSET</text>
+  <text x="290" y="228" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">NET ZERO</text>
+
+  <!-- Metric row 1 -->
+  <g transform="translate(68, 245)">
+    <rect width="300" height="38" rx="6" fill="#064e3b" stroke="#047857" stroke-width="0.8" />
+    <circle cx="20" cy="19" r="6" fill="#34d399" />
+    <text x="35" y="18" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Annual CO₂ Offset</text>
+    <text x="35" y="30" fill="#a7f3d0" font-family="monospace" font-size="9">Equivalent to 180 mature trees</text>
+    <text x="225" y="24" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">4.2 Tons</text>
+  </g>
+
+  <!-- Metric row 2 -->
+  <g transform="translate(68, 292)">
+    <rect width="300" height="38" rx="6" fill="#064e3b" stroke="#047857" stroke-width="0.8" />
+    <circle cx="20" cy="19" r="6" fill="#f59e0b" />
+    <text x="35" y="18" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Grid Independence Ratio</text>
+    <text x="35" y="30" fill="#a7f3d0" font-family="monospace" font-size="9">Battery storage &amp; inverter sync</text>
+    <text x="225" y="24" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="700">82.5% Off-Grid</text>
+  </g>
+
+  <!-- Interactive ROI Calculator badge -->
+  <g transform="translate(68, 342)">
+    <rect width="300" height="48" rx="6" fill="#033529" stroke="#047857" stroke-width="1" />
+    <text x="15" y="20" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="10">INTERACTIVE ROI CALCULATOR</text>
+    <text x="15" y="36" fill="#f8fafc" font-family="monospace" font-size="11" font-weight="700">Estimated Payback Period: 3.4 Yrs</text>
+    <text x="245" y="28" fill="#34d399" font-family="monospace" font-size="10">Next.js</text>
+  </g>
+
+  <!-- Right Column: Solar Radiation Curve & Inverter Performance (x: 410 to 750) -->
+  <rect x="410" y="95" width="340" height="310" rx="12" fill="#022c22" stroke="#065f46" stroke-width="1.5" />
+  <text x="430" y="123" fill="#d1fae5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">DAYLIGHT GENERATION HARVEST</text>
+  <text x="670" y="123" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">SOLAR PEAK</text>
+
+  <!-- Daily Generation Curve Graph -->
+  <g transform="translate(430, 145)">
+    <rect width="300" height="150" rx="8" fill="#064e3b" stroke="#047857" stroke-width="0.8" />
+    
+    <!-- Base axes -->
+    <line x1="20" y1="120" x2="280" y2="120" stroke="#047857" stroke-width="1" />
+    <line x1="20" y1="80" x2="280" y2="80" stroke="#047857" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="20" y1="40" x2="280" y2="40" stroke="#047857" stroke-width="1" stroke-dasharray="3,3" />
+
+    <!-- Daylight bell curve -->
+    <path d="M 20 120 Q 80 115, 120 70 T 150 25 T 180 30 T 220 85 T 280 120" fill="none" stroke="#f59e0b" stroke-width="2.5" />
+    <path d="M 20 120 Q 80 115, 120 70 T 150 25 T 180 30 T 220 85 T 280 120 Z" fill="#fbbf24" opacity="0.15" />
+    <circle cx="150" cy="25" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+
+    <text x="25" y="25" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="10">PHOTOVOLTAIC HARVEST CURVE</text>
+    <text x="25" y="138" fill="#6ee7b7" font-family="monospace" font-size="9">06:00</text>
+    <text x="100" y="138" fill="#6ee7b7" font-family="monospace" font-size="9">10:00</text>
+    <text x="140" y="138" fill="#fde047" font-family="monospace" font-size="9">12:30 PEAK</text>
+    <text x="210" y="138" fill="#6ee7b7" font-family="monospace" font-size="9">16:00</text>
+    <text x="260" y="138" fill="#6ee7b7" font-family="monospace" font-size="9">19:00</text>
+  </g>
+
+  <!-- Performance & Tech Stack Footer -->
+  <g transform="translate(430, 310)">
+    <rect width="300" height="78" rx="8" fill="#033529" stroke="#047857" stroke-width="1" />
+    <text x="15" y="24" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="10">FRONTEND ARCHITECTURE</text>
+    <text x="15" y="44" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Next.js + Tailwind + Framer Motion</text>
+    <text x="15" y="64" fill="#34d399" font-family="monospace" font-size="10">99/100 Lighthouse Performance • Fluid Animations</text>
+  </g>
+</svg>
