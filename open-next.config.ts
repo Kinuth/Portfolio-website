@@ -1,8 +1,3 @@
-import type { NextConfig } from "next";
+import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
-const nextConfig: NextConfig = {
-  output: "export",
-  images: { unoptimized: true },
-};
-
-export default nextConfig;
+export default defineCloudflareConfig({});
